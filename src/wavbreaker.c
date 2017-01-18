@@ -1060,7 +1060,7 @@ void track_break_add_offset( char* filename, guint offset)
     }
 
     if( offset > graphData.numSamples) {
-        if( filename != NULL) {
+        if( filename != NULL && filename != ((char *)-1)) {
             printf( "Offset for %s is too big, skipping.\n", filename);
         }
         return;
